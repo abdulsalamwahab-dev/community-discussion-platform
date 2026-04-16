@@ -1,0 +1,74 @@
+body, html {
+height: 100%;
+margin: 0;
+}
+body {
+background: #edf0fa;
+}
+.container {
+min-height: 100%;
+}
+a.active {
+border-bottom: 3px solid #ffffff;
+color: #ffffff !important;
+font-weight: 600;
+}
+.navbar {
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+padding: 5px 20px;
+background-color: #98c5fd !important;
+}
+.text-center {
+text-align: center;
+}
+.navbar-nav a {
+color: #ffffff !important;
+text-decoration: none;
+}
+.color_carbon {
+color: #000000;
+}
+.font_size_14 {
+font-size: 14px;
+}
+.btn-outline-success {
+color: #fff;
+background-color: #198754;
+border-color: #198754;
+}
+.gap_15 {
+gap: 15px;
+}
+.card_v2 {
+box-shadow: 0 0 0 3px rgba(7, 56, 205, .24);
+background-color: #fff;
+border: 1px solid #d0d0d0;
+border-radius: 10px;
+max-width: 550px;
+}
+.card_v2:hover {
+box-shadow: 0 0 0 3px rgba(7, 56, 205, .24);
+background: #edf0fa;
+transition: all 0.3s ease;
+border: 1px solid #d0d0d0;
+border-radius: 10px;
+}
+.card-title {
+margin-bottom: 0;
+}
+.logo {
+height: auto;
+object-fit: cover;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+width: 160px;
+}
+.content_center {
+min-width: 150px;
+text-align: center;   
+}
+footer {
+background-color: #98c5fd !important;
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+padding: 5px 20px;
+margin-top: auto;
+}
