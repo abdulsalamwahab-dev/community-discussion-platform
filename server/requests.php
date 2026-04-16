@@ -34,7 +34,25 @@ if (isset($_POST['signUpbtn'])) {
         $_SESSION['user'] = ["username" => $userName, "email" => $userEmail_login, "user_id" => $user_id];
         header("Location: /discuss");
     } else {
-        echo "Invalid email or password";
+        echo '
+    <div style="
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #ffe6e6;
+        border: 1px solid #ff4d4d;
+        color: #cc0000;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    ">
+        <h3 style="margin-bottom: 10px;">Login Failed</h3>
+        <p style="margin: 0;">
+            Invalid email or password. Please try again.
+        </p>
+    </div>
+    ';
     }
 } elseif (isset($_GET['logout'])) {
     session_destroy();
@@ -47,22 +65,22 @@ if (isset($_POST['signUpbtn'])) {
     $question = $conn->query("INSERT INTO questions (title, description, category_id, user_id) 
     VALUES ('$title', '$description', '$category_id', '$user_id')");
     if ($question) {
-            header("Location: /discuss");
+        header("Location: /discuss");
     } else {
         echo "Question has been failed to submit: " . $conn->error;
     }
-}elseif (isset($_POST['submit-answer'])) {
-        $answer = $_POST['textarea_answer'];
-        $q_id = $_POST['q-id'];
-        $user_id = $_SESSION['user']['user_id'];
-        $query = $conn->query("INSERT INTO answers (answer, question_id, user_id) 
+} elseif (isset($_POST['submit-answer'])) {
+    $answer = $_POST['textarea_answer'];
+    $q_id = $_POST['q-id'];
+    $user_id = $_SESSION['user']['user_id'];
+    $query = $conn->query("INSERT INTO answers (answer, question_id, user_id) 
         VALUES ('$answer', '$q_id', '$user_id')");
-        if ($query) {
-            header("Location: /discuss/?q-id=$q_id");
-        } else {
-            echo "Answer has  been failed to submit: " . $conn->error;
-        }
-}elseif (isset($_GET['delete_question'])) {
+    if ($query) {
+        header("Location: /discuss/?q-id=$q_id");
+    } else {
+        echo "Answer has  been failed to submit: " . $conn->error;
+    }
+} elseif (isset($_GET['delete_question'])) {
     $question_id = $_GET['delete_question'];
     $delete_query = $conn->query("DELETE FROM questions WHERE id='$question_id'");
     if ($delete_query) {
