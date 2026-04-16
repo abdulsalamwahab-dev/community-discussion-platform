@@ -4,35 +4,9 @@
         <p>
             We encourage you to share your insights on relevant questions and contribute your valuable queries as well.
         </p>
-        <a href="?latest" class="btn">All Questions</a>
-    </div>
-
-    <div class="explore" style="background-color: white;">
-        <h2>Start Exploring</h2>
-
-        <div class="card-container">
-
-            <a href="?latest" class="card">
-                <div class="icon">💬</div>
-                <h3>Latest Questions</h3>
-                <p>Submit your questions and receive valuable answers.</p>
-            </a>
-
-            <a href="?askQuestion" class="card">
-                <div class="icon">⚡</div>
-                <h3>Add a Question</h3>
-                <p>Contribute helpful and insightful responses.</p>
-            </a>
-
-            <a href="?c-id=1" class="card">
-                <div class="icon">📚</div>
-                <h3>Explore Categories</h3>
-                <p>Explore various topics to enhance your knowledge.</p>
-            </a>
-
-        </div>
     </div>
 </div>
+
 <div class="container my-4" style="min-height: 100vh;">
     <div class="row">
         <div class="col-8">
@@ -67,12 +41,12 @@
             } else {
                 foreach ($result_questions_show as $question) {
                     echo "<a href='?q-id={$question['id']}' style='text-decoration: none; color: inherit; display: block;'>
-        <div class='card_v2 my-3'>
-            <div class='card-body'>
-                <h5 class='card-title'>{$question['title']}</h5>
-                <p class='card-text'>{$question['description']}</p>
+                            <div class='card_v2 my-3'>
+                                <div class='card-body'>
+                                    <h5 class='card-title'>{$question['title']}</h5>
+                                    <p class='card-text'>{$question['description']}</p>
 
-      </a>";
+                        </a>";
 
                     // Show delete only in "My Questions"
                     if (isset($_GET['u-id'])) {

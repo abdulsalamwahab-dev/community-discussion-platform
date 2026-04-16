@@ -11,7 +11,7 @@
         $row = $result->fetch_assoc();
         $category_id = $row['category_id'];
         echo "<div class='my-3'>
-            <div class='card card_v2 pb-0 px-3 pt-3'>
+            <div class='card_v2 pb-0 px-3 pt-3'>
                 <h5>{$row['title']}</h5>
                 <p>{$row['description']}</p>
             </div>
@@ -42,7 +42,7 @@
                 $query_related = "SELECT * FROM `questions` where category_id='$category_id' and id != '$get_id'";
                 $result_related = $conn->query($query_related);
                 foreach ($result_related as $related) {
-                    echo "<li class='list-group-item card card_v2 p-3'><h5 class='mb-0'><a style='text-decoration: none;color: #212529;' href='?q-id={$related['id']}'>{$related['title']}</a></h5></li>";
+                    echo "<li class='list-group-item card_v2 p-3' style='border-radius: 10px;'><h5 class='mb-0'><a style='text-decoration: none;color: #212529;' href='?q-id={$related['id']}'>{$related['title']}</a></h5></li>";
                 }
                 ?>
         </div>

@@ -1,3 +1,12 @@
+<div style="background: linear-gradient(to right, #5a9bd5, #3f6b8a);">
+    <div class="hero">
+        <h1>Discuss and Share Knowledge with the Community.</h1>
+        <p>
+            We encourage you to share your insights on relevant questions and contribute your valuable queries as well.
+        </p>
+    </div>
+</div>
+
 <div class="container mt-4 min-vh-100">
     <div class="row">
         <div class="col-md-4 col-12 offset-md-4">

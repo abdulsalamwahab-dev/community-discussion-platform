@@ -71,6 +71,7 @@ text-align: center;
   text-align: center;
   padding: 80px 20px;
   color: white;
+  background: linear-gradient(135deg, #4facfe, #343434);
 }
 
 .hero h1 {
